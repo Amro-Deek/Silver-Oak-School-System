@@ -378,7 +378,7 @@ I had the privilege of working alongside some of the kindest and most driven peo
 
 - **Yahya Abu Rayyan**  
 - **Deema Abu Nimeh**  
-- **Assel Abd Alhaq**
+- **Aseel Abd Alhaq**
 
 Thanks for every idea, every bug we fixed, and every laugh we shared along the way.
 
