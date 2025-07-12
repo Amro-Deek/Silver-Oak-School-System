@@ -1,0 +1,56 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:elevation="4dp"
+    android:radius="12dp"
+    android:layout_marginHorizontal="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#2b2d42"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textViewStudentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+
+            android:text="👤 Student Name"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:textColor="@color/white"
+
+            android:id="@+id/textViewSubmissionDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📅 Submitted: 2025-06-09"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:textColor="@color/white"
+
+            android:id="@+id/textViewMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✉️ Message content goes here"
+            android:textSize="14sp"
+            android:layout_marginTop="6dp" />
+
+        <TextView
+            android:id="@+id/textViewAttachmentUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📎 File: http://example.com/file.pdf"
+            android:autoLink="web"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

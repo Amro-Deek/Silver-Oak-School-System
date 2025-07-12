@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    android:padding="16dp"
+    app:cardCornerRadius="16dp"> <!-- Rounded corners -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2b2d42"
+        android:padding="5dp"
+        >
+
+        <!-- Exam Type (Top-Right) -->
+        <TextView
+            android:id="@+id/examType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Midterm"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true" />
+
+        <!-- Subject Name (Top-Left) -->
+        <TextView
+            android:id="@+id/subjectName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject Name"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="80dp" />
+
+        <!-- Grade Value (Below Subject Name) -->
+        <TextView
+            android:id="@+id/gradeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grade: 90"
+            android:textSize="16sp"
+            android:textColor="#8d99ae"
+            android:layout_below="@id/subjectName"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

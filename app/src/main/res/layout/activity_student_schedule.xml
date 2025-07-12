@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- Top Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/topNavBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="#2b2d42"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/topNavText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="StudentSchedule"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Day Tabs -->
+    <LinearLayout
+        android:id="@+id/dayTabs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="4dp"
+        android:paddingHorizontal="4dp"
+        app:layout_constraintTop_toBottomOf="@id/topNavBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSun"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:text="@string/sun"
+            android:backgroundTint="#2b2d42"
+            android:layout_margin="2dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonMon"
+            android:layout_width="0dp"
+            android:layout_weight="1.1"
+            android:layout_height="50dp"
+            android:text="@string/mon"
+            android:backgroundTint="#2b2d42"
+            android:layout_margin="2dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonTue"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:text="@string/tue"
+            android:backgroundTint="#2b2d42"
+            android:layout_margin="2dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonWed"
+            android:layout_width="0dp"
+            android:layout_weight="1.1"
+            android:layout_height="50dp"
+            android:text="@string/wed"
+            android:backgroundTint="#2b2d42"
+            android:layout_margin="2dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonThu"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:text="@string/thu_"
+            android:backgroundTint="#2b2d42"
+            android:layout_margin="2dp" />
+    </LinearLayout>
+
+    <!-- Empty Message -->
+    <TextView
+        android:id="@+id/emptyMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/no_schedule_for_this_day"
+        android:textSize="16sp"
+        android:textColor="#888888"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/dayTabs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- RecyclerView for Timeline -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSchedule"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toBottomOf="@id/emptyMessage"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/schedule_card"
+        />
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#2b2d42"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Dashboard -->
+        <LinearLayout
+            android:id="@+id/navDashboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/dashboard" />
+
+            <TextView
+                android:id="@+id/text_dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dashboard_d"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <!-- Schedule -->
+        <LinearLayout
+            android:id="@+id/navSchedule"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/myschedule" />
+
+            <TextView
+                android:id="@+id/text_schedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Schedule"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <!-- Marks -->
+        <LinearLayout
+            android:id="@+id/navMarks"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/assignments" />
+
+            <TextView
+                android:id="@+id/text_marks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marks"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

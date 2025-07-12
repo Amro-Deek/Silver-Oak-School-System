@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- Custom button style -->
+    <style name="CustomButton" parent="Widget.Material3.Button">
+        <item name="android:backgroundTint">@color/button_background</item>
+        <item name="android:textColor">@color/button_text</item>
+    </style>
+
+    <!-- Custom text style -->
+    <style name="CustomText" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <!-- Card title style -->
+    <style name="CardTitleText">
+        <item name="android:textColor">@color/card_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>

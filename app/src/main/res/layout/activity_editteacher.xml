@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#8d99ae"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_teacher"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:paddingBottom="16dp"/>
+
+        <!-- Spinner Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_teacher_id"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Spinner -->
+        <Spinner
+            android:id="@+id/spinnerTeacherIds"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_edittext_white"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"/>
+
+        <!-- Disabled Teacher ID -->
+        <EditText
+            android:id="@+id/editTeacherId"
+            android:hint="@string/teacherID"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_edittext_white"
+
+            android:drawablePadding="12dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:inputType="text"
+            android:enabled="false"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Full Name -->
+        <EditText
+            android:id="@+id/editTeacherName"
+            android:hint="@string/full_name_teacheer"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_edittext_white"
+
+            android:drawablePadding="12dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Email -->
+        <EditText
+            android:id="@+id/editTeacherEmail"
+            android:hint="@string/emailTeacher"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_edittext_white"
+
+            android:drawablePadding="12dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Subject (Department) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/department"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+            <Spinner
+                android:id="@+id/editSubjectSpinner"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_edittext_white"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+        </LinearLayout>
+
+        <!-- Salary -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/salary"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+            <Spinner
+                android:id="@+id/editExperienceSpinner"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_edittext_white"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+        </LinearLayout>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSaveTeacherChanges"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/save_changes_teacher"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#2b2d42"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,177 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8d99ae">
+
+    <ScrollView
+        android:id="@+id/scrollViewAssignment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        android:layout_above="@id/bottom_nav">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/CustomText"
+                android:text="@string/send_assignment"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Assignment Title -->
+            <EditText
+                android:id="@+id/editTextTitle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="@string/enter_title"
+android:background="@drawable/edit_text_border"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Description -->
+            <EditText
+                android:id="@+id/editTextDescription"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="@string/enter_description"
+                android:background="@drawable/edit_text_border"
+
+                android:padding="12dp"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Attach Files -->
+            <Button
+                android:id="@+id/buttonChooseFile"
+                android:layout_height="48dp"
+                android:text="@string/attach_files"
+                android:backgroundTint="#2b2d42"                android:layout_width="match_parent"
+                android:layout_marginBottom="16dp"
+                />
+
+            <TextView
+                android:id="@+id/textViewFileName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_file_selected_"
+                android:textColor="@color/text_color"
+                android:layout_marginBottom="16dp"
+                android:textSize="14sp" />
+
+            <!-- Due Date Picker Button -->
+            <Button
+                android:id="@+id/buttonPickDate"
+                android:backgroundTint="#2b2d42"                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/pick_due_date"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Due Date Label -->
+            <TextView
+                android:id="@+id/textViewDueDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/CustomText"
+                android:text="@string/select_due_date"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/buttonSubmitAssignment"
+                android:backgroundTint="#2b2d42"                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/submit_assignment_" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Nav -->
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_height="68dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#2b2d42"                android:layout_width="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/navDashboard"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/dashboard" />
+
+            <TextView
+                style="@style/CustomText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dashboard_"
+                android:id="@+id/text_dashboard"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/navSchedule"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/myschedule" />
+
+            <TextView
+                style="@style/CustomText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/schedule_"
+                android:id="@+id/text_schedule"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:id="@+id/navMarks"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/assignments" />
+
+            <TextView
+                style="@style/CustomText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/marks_"
+                android:id="@+id/text_marks"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

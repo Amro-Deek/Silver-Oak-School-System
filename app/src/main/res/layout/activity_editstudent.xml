@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#8d99ae"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:text="@string/edit_student"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Spinner Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_student_id"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Spinner -->
+        <Spinner
+            android:id="@+id/spinnerStudentIds"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_edittext_white"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp" />
+
+        <!-- Readonly Student ID -->
+        <EditText
+            android:id="@+id/editStudentId"
+            android:hint="@string/student_id"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_edittext_white"
+
+            android:drawablePadding="12dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:inputType="number"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:enabled="false"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Full Name -->
+        <EditText
+            android:id="@+id/editName"
+            android:hint="@string/full_name_std"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_edittext_white"
+
+            android:drawablePadding="12dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Email -->
+        <EditText
+            android:id="@+id/editEmail"
+            android:hint="@string/email_std"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_edittext_white"
+
+            android:drawablePadding="12dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Birth Year -->
+        <EditText
+            android:id="@+id/editBirthYear"
+            android:hint="@string/birth_year"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_edittext_white"
+
+            android:drawablePadding="12dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:inputType="number"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Major -->
+        <EditText
+            android:id="@+id/editMajor"
+            android:hint="@string/major_std"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_edittext_white"
+
+            android:drawablePadding="12dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Level -->
+        <EditText
+            android:id="@+id/editLevel"
+            android:hint="@string/level_e_g_freshman_sophomore"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_edittext_white"
+
+            android:drawablePadding="12dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:inputType="text"
+            android:textColor="#000000"
+            android:textColorHint="#888888"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Save Changes Button -->
+        <Button
+            android:id="@+id/btnSaveStudentChanges"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/save_changes"
+            android:backgroundTint="#2b2d42"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="24dp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_dashboard"
+        android:icon="@drawable/dashboard"
+        android:title="Dashboard" />
+    <item
+        android:id="@+id/nav_schedule"
+        android:icon="@drawable/myschedule"
+        android:title="Schedule" />
+    <item
+        android:id="@+id/nav_marks"
+        android:icon="@drawable/assignments"
+        android:title="Marks" />
+</menu>

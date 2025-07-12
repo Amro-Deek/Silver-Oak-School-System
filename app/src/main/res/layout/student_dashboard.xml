@@ -1,0 +1,186 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8d99ae">
+
+    <!-- Top Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/topNavBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="#2b2d42"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/topNavText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logged in as: Student"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Theme Switch -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/themeSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dark Mode"
+        android:textColor="#000000"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/topNavBar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Subjects Label -->
+    <TextView
+        android:id="@+id/subjectsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Subjects"
+        android:textColor="#2b2d42"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintTop_toBottomOf="@id/themeSwitch"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- List of Subjects -->
+    <ListView
+        android:id="@+id/listViewSubjects"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:divider="#2b2d42"
+        android:dividerHeight="1dp"
+        app:layout_constraintTop_toBottomOf="@id/subjectsLabel"
+        app:layout_constraintBottom_toTopOf="@id/btnSubmitAssigment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Submit Assignment Button -->
+    <Button
+        android:id="@+id/btnSubmitAssigment"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Submit Assignment"
+        android:backgroundTint= "#2b2d42"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/listViewSubjects"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- GPA Calculator Button -->
+    <Button
+        android:id="@+id/buttonGpaCalculator"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="GPA Calculator"
+        android:backgroundTint= "#2b2d42"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/btnSubmitAssigment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ToDo List Button -->
+    <Button
+        android:id="@+id/buttonToDoList"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="ToDo List"
+        android:backgroundTint="#2b2d42"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/buttonGpaCalculator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav" />
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#2b2d42"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/navDashboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/dashboard" />
+
+            <TextView
+                android:id="@+id/text_dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dashboard"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navSchedule"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/myschedule" />
+
+            <TextView
+                android:id="@+id/text_schedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Schedule"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navMarks"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/assignments" />
+
+            <TextView
+                android:id="@+id/text_marks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marks"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

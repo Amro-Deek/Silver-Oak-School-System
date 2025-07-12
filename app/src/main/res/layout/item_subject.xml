@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/card_background"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/textViewSubjectName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subject Name"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/card_text"
+        android:layout_marginBottom="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/buttonSubmitAssignmen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            style="@style/CustomButton"
+            android:text="Send Assignment" />
+
+        <Button
+            android:id="@+id/buttonViewAssignments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CustomButton"
+            android:text="View Assignments/Replies" />
+    </LinearLayout>
+</LinearLayout>

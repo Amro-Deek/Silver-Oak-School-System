@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_registrar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8d99ae">
+
+    <!-- Page Title -->
+    <TextView
+        android:id="@+id/pageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registrar_dashboard"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pageTitle"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnAddStudent"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/add_student_registrar"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2b2d42"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnEditStudent"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/edit_student_registrar"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2b2d42"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnAddTeacher"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/add_teacher_registrar"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2b2d42"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnEditTeacher"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/edit_teacher_reg"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2b2d42"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnStudentSchedule"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/add_student_schedule"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2b2d42"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnAddSubject"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/add_subject_reg"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2b2d42"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnTeacherSchedule"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/add_teacher_schedule"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2b2d42"
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
+</RelativeLayout>

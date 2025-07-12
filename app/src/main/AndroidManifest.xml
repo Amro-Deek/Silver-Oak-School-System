@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:usesCleartextTraffic="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FinalProject"
+        tools:targetApi="31">
+        <activity android:name=".activities.SendAssignmentActivity" />
+        <activity android:name=".activities.ViewAssignmentsActivity" />
+        <activity android:name=".activities.ViewRepliesActivity" />
+        <activity android:name=".activities.UploadMarksActivity" />
+        <activity android:name=".activities.TeacherScheduleActivity" />
+        <activity android:name=".activities.TeacherDashboardActivity" />
+        <activity android:name=".Yahya.StudentDashboardActivity" />
+        <activity android:name=".Yahya.AssignmentSubmitionActivity" />
+        <activity android:name=".Yahya.GPACalculatorActivity" />
+        <activity android:name=".Yahya.StudentMarksActivity" />
+        <activity android:name=".Yahya.StudentScheduleActivity" />
+        <activity android:name=".Yahya.ToDoListActivity" />
+        <activity android:name=".Yahya.ViewAssigmentsActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".deema.AboutUs" />
+        <activity android:name=".deema.cardpart" />
+        <activity android:name=".deema.CONTACTUS" />
+        <activity android:name=".deema.EventCalandar" />
+        <activity android:name=".deema.NewsLetter" />
+        <activity android:name=".deema.singleevent" />
+        <activity android:name=".aseel.MainRegistrar" />
+        <activity android:name=".aseel.AddStudentActivity" />
+        <activity android:name=".aseel.studentschedule" />
+        <activity android:name=".aseel.AddSubjectActivity" />
+        <activity android:name=".aseel.AddTeacher" />
+        <activity android:name=".aseel.editstudent" />
+        <activity android:name=".aseel.editteacher" />
+        <activity android:name=".aseel.Teacherschedule" />
+
+
+
+
+
+
+
+
+
+
+
+        <activity
+            android:name=".activities.Splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

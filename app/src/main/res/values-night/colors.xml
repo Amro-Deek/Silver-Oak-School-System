@@ -1,0 +1,8 @@
+<resources>
+    <color name="background_color">#2b2d42</color> <!-- page background dark -->
+    <color name="card_background">#8d99ae</color> <!-- card background in dark -->
+    <color name="button_background">#2b2d42</color> <!-- button background in dark -->
+    <color name="button_text">#FFFFFF</color> <!-- button text in dark -->
+    <color name="text_color">#FFFFFF</color>
+    <color name="card_text">#000000</color> <!-- card text in dark for contrast -->
+</resources>

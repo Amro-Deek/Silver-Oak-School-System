@@ -1,0 +1,198 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🗓️ My Schedule"
+            android:textStyle="bold"
+            android:paddingBottom="2dp"
+            android:textSize="22dp" />
+
+
+    </LinearLayout>
+
+    <!-- Day Tabs -->
+    <LinearLayout
+        android:id="@+id/dayTabs"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:paddingHorizontal="4dp">
+
+        <Button
+            android:id="@+id/buttonSun"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+android:textColor="@color/white"
+            android:text="Sun"
+            android:layout_margin="2dp"
+            android:backgroundTint="#2b2d42"
+             />
+
+        <Button
+            android:id="@+id/buttonMon"
+            android:layout_width="0dp"
+            android:layout_weight="1.1"
+            android:layout_height="50dp"
+            android:text="Mon"
+            android:textColor="@color/white"
+
+            android:layout_margin="2dp"
+            android:backgroundTint="#2b2d42" />
+
+        <Button
+            android:id="@+id/buttonTue"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:text="Tue"
+            android:layout_margin="2dp"
+            android:textColor="@color/white"
+
+            android:backgroundTint="#2b2d42" />
+
+        <Button
+            android:id="@+id/buttonWed"
+            android:layout_width="0dp"
+            android:layout_weight="1.1"
+            android:layout_height="50dp"
+            android:text="Wed"
+            android:textColor="@color/white"
+
+            android:layout_margin="2dp"
+            android:backgroundTint="#2b2d42" />
+
+        <Button
+            android:id="@+id/buttonThu"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:text="Thu"
+            android:layout_margin="2dp"
+            android:textColor="@color/white"
+
+            android:backgroundTint="#2b2d42" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/emptyMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No schedule for this day."
+        android:textSize="16sp"
+        android:textColor="#888888"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_below="@id/dayTabs"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"/>
+
+
+    <!-- RecyclerView for Timeline -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSchedule"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/dayTabs"
+        android:layout_above="@+id/bottom_nav"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="16dp" />
+
+    <!-- Bottom Nav (reused from your design) -->
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#2b2d42"
+        >
+
+        <LinearLayout
+            android:id="@+id/navDashboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/dashboard" />
+            <TextView
+                android:id="@+id/text_dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dashboard"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navSchedule"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/myschedule" />
+
+            <TextView
+                android:id="@+id/text_schedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Schedule"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navMarks"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/assignments" />
+            <TextView
+                android:id="@+id/text_marks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marks"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
